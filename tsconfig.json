@@ -4,11 +4,11 @@
         "sourceMap": true,
         "noImplicitAny": false,
         "moduleResolution": "node",
-        "module": "commonjs",
-        "target": "es2015",
+        "module": "es6",
+        "target": "es6",
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
-        "jsx": "react",
+        "jsx": "preserve",
         "forceConsistentCasingInFileNames": false
     },
     "include": [

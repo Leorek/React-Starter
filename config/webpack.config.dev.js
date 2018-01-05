@@ -33,6 +33,7 @@ module.exports = {
   // This means they will be the "root" imports that are included in JS bundle.
   // The first two entry points enable "hot" CSS and auto-refreshes for JS.
   entry: [
+    'babel-polyfill',
     // We ship a few polyfills by default:
     require.resolve('./polyfills'),
     // Include an alternative client for WebpackDevServer. A client's job is to
@@ -132,7 +133,7 @@ module.exports = {
           {
             test: /\.tsx?$/,
             include: paths.appSrc,
-            loader: 'awesome-typescript-loader'
+            loader: 'babel-loader!awesome-typescript-loader'
           },
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
